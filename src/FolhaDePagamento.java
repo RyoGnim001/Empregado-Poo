@@ -15,16 +15,16 @@ public class FolhaDePagamento {
 
 
     public void exibirTodos() {
-        for (Empregado emp : empregados) {
-            System.out.println("Nome: " + emp.getNome() + " " + emp.getSobrenome() +
-                    ", CPF: " + emp.getCpf() + ", Vencimento: " + emp.vencimento());
+        for (Empregado empregado : empregados) {
+            System.out.println("Nome: " + empregado.getNome() + " " + empregado.getSobrenome() +
+                    ", CPF: " + empregado.getCpf() + ", Vencimento: " + empregado.vencimento());
         }
     }
 
 
     public double calcularValorTotal() {
         double total = 0;
-        for (Empregado emp : empregados) {
+        for (Empregado empregado : empregados) {
             total += emp.vencimento();
         }
         return total;
